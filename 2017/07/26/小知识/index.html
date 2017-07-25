@@ -12,7 +12,7 @@
     
     <title>
         
-            分类: Proguard | 
+            札记 | 
         
         Drawn0-0
     </title>
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: Proguard | Drawn0-0">
+    <meta property="og:title" content="札记 | Drawn0-0">
     <meta property="og:image" content="/img/logo2.PNG" />
     <meta property="og:description" content="">
     
 
     
+        <meta property="article:published_time" content="7月 26, 2017" />
+        <meta property="article:modified_time" content="7月 26, 2017" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="分类: Proguard | Drawn0-0">
+    <meta name="twitter:title" content="札记 | Drawn0-0">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/logo2.PNG">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/categories/Proguard/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/07/26/小知识/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Drawn0-0",
+        "logo": "/img/logo2.PNG"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Drawn",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/logo2.PNG"
+        },
+        "description": "你现在所担心的一切，不过是未来忆起往事时的小小插曲罢了"
+    },
+    "headline": "札记",
+    "url": "http://yoursite.com/2017/07/26/小知识/index.html",
+    "datePublished": "7月 26, 2017",
+    "dateModified": "7月 26, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com"
+    }
+}
+</script>
 
 
     
@@ -270,96 +303,325 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#返回桌面"><span class="post-toc-number">1.</span> <span class="post-toc-text">返回桌面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决64k方法问题"><span class="post-toc-number">2.</span> <span class="post-toc-text">解决64k方法问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建数据库"><span class="post-toc-number">3.</span> <span class="post-toc-text">创建数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于文件模式"><span class="post-toc-number">4.</span> <span class="post-toc-text">关于文件模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于DuplicateFileException重复文件异常"><span class="post-toc-number">5.</span> <span class="post-toc-text">关于DuplicateFileException重复文件异常</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SQLite支持的数据类型"><span class="post-toc-number">6.</span> <span class="post-toc-text">SQLite支持的数据类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库查询有多少张表"><span class="post-toc-number">7.</span> <span class="post-toc-text">数据库查询有多少张表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查询表头字段格式"><span class="post-toc-number">8.</span> <span class="post-toc-text">查询表头字段格式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Cursor的一些方法"><span class="post-toc-number">9.</span> <span class="post-toc-text">Cursor的一些方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于nginx"><span class="post-toc-number">10.</span> <span class="post-toc-text">关于nginx</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#System-setProperty"><span class="post-toc-number">11.</span> <span class="post-toc-text">System.setProperty()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CMD指令"><span class="post-toc-number">12.</span> <span class="post-toc-text">CMD指令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#批处理"><span class="post-toc-number">13.</span> <span class="post-toc-text">批处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于wampserver"><span class="post-toc-number">14.</span> <span class="post-toc-text">关于wampserver</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于GWT"><span class="post-toc-number">15.</span> <span class="post-toc-text">关于GWT</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/07/24/Proguard text/">常用混淆设置</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            常用混淆设...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/07/24/Proguard text/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="Drawn's avatar">
-            </div>
-            <div>
-                <strong>Drawn</strong>
-                <span>7月 24, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Proguard/">Proguard</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                札记
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/ava.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Drawn</strong>
+        <span>7月 26, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=札记&url=http://yoursite.com/2017/07/26/小知识/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=札记&url=http://yoursite.com/2017/07/26/小知识/index.html&via=Drawn" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/07/26/小知识/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/07/26/小知识/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="返回桌面"><a href="#返回桌面" class="headerlink" title="返回桌面"></a>返回桌面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Intent home=new Intent(Intent.ACTION_MAIN);  </div><div class="line">home.addCategory(Intent.CATEGORY_HOME);  </div><div class="line">startActivity(home);</div></pre></td></tr></table></figure>
+<h3 id="解决64k方法问题"><a href="#解决64k方法问题" class="headerlink" title="解决64k方法问题"></a>解决64k方法问题</h3><p>在app build.gradle下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">  ....</div><div class="line">    defaultConfig &#123;</div><div class="line">        ....</div><div class="line">        multiDexEnabled true</div><div class="line">    &#125;</div><div class="line">    ....</div><div class="line">&#125;</div><div class="line"></div><div class="line">dependencies &#123;</div><div class="line">    ....</div><div class="line">    compile &apos;com.android.support:multidex:1.0.0&apos;</div><div class="line">    ....</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后在Manifest中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;application</div><div class="line">        android:name=&quot;android.support.multidex.MultiDexApplication&quot;</div><div class="line">        ....</div><div class="line">        &gt;</div><div class="line">        ....</div><div class="line">    &lt;/application&gt;</div></pre></td></tr></table></figure></p>
+<p>如果有自己的Application，那么就在 <strong>attachBaseContext()</strong> 中调用 <strong>MultiDex.install(this)</strong> 支持multidex。</p>
+<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><p><a href="http://www.cnblogs.com/mmy0925/archive/2013/01/22/2871593.html" target="_blank" rel="external">http://www.cnblogs.com/mmy0925/archive/2013/01/22/2871593.html</a></p>
+<h3 id="关于文件模式"><a href="#关于文件模式" class="headerlink" title="关于文件模式"></a>关于文件模式</h3><p><strong>MODE_PRIVATE</strong></p>
+<blockquote>
+<pre><code>/**
+ * File creation mode: the default mode, where the created file can only
+ * be accessed by the calling application (or all applications sharing the
+ * same user ID).
+ */
+</code></pre></blockquote>
+<p>文件的默认模式，文件只能被创建它的应用获取。当文件流设置这种方式时，文件会被创建打开，如果文件有数据时，数据会被覆盖。如果是数据库时，数据库的数据并不会被覆盖</p>
+<h3 id="关于DuplicateFileException重复文件异常"><a href="#关于DuplicateFileException重复文件异常" class="headerlink" title="关于DuplicateFileException重复文件异常"></a>关于DuplicateFileException重复文件异常</h3><p>引入相同的jar包编译时，会出现DuplicateFileException异常，如下：<br>com.android.builder.packaging.DuplicateFileException: Duplicate files copied in APK META-INF/LICENSE<br>这是由于jar中有相同的LICENSE文件，在app build.gradle中通过packagingOptions设置排除该文件即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">    compileSdkVersion 25</div><div class="line">    buildToolsVersion &quot;26.0.0&quot;</div><div class="line">    packagingOptions&#123;</div><div class="line">        exclude  &apos;META-INF/DEPENDENCIES&apos;</div><div class="line">        exclude &apos;META-INF/LICENSE&apos;</div><div class="line">    &#125;</div><div class="line">    ....</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>提示什么重复就exclude添加什么文件就行了</p>
+<h3 id="SQLite支持的数据类型"><a href="#SQLite支持的数据类型" class="headerlink" title="SQLite支持的数据类型"></a>SQLite支持的数据类型</h3><p><a href="https://www.sqlite.org/datatype3.html" target="_blank" rel="external">官网地址</a></p>
+<ol>
+<li><p>NULL 这种类型保存的全是null值</p>
+</li>
+<li><p>INTEGER 基本就是所有的整数类型</p>
+</li>
+<li><p>REAL 小数类型</p>
+</li>
+<li><p>TEXT 文本类型，编码格式 (UTF-8, UTF-16BE 或者 UTF-16LE).</p>
+</li>
+<li><p>BLOB 这种类型是你输入什么就保存什么。举个例子，你可以以这种类型保存音乐，视频，图片到数据库中  </p>
+</li>
+</ol>
+<h3 id="数据库查询有多少张表"><a href="#数据库查询有多少张表" class="headerlink" title="数据库查询有多少张表"></a>数据库查询有多少张表</h3><p>SELECT name FROM sqlite_master WHERE type = ‘table’ AND name != ‘android_metadata’ AND name != ‘sqlite_sequence’;<br>这里排除了android_metadata表和sqlite_sequence表。<br><strong>android_metadata</strong> 记录了创建的地区。<br><img src="SQLite4.jpg" alt=""><br><strong>sqlite_sequence</strong> 记录了数据库包含的表名及其对应的数据量<br><img src="SQLite3.jpg" alt=""></p>
+<h3 id="查询表头字段格式"><a href="#查询表头字段格式" class="headerlink" title="查询表头字段格式"></a>查询表头字段格式</h3><p>PRAGMA table_info(表名);如下数据库查询<br><img src="SQLite1.jpg" alt="">可得<br><img src="SQLite2.jpg" alt=""></p>
+<h3 id="Cursor的一些方法"><a href="#Cursor的一些方法" class="headerlink" title="Cursor的一些方法"></a>Cursor的一些方法</h3><p>.moveToPrevious 移动游标到上一行<br>·isAfterLast() 游标是否指向最后一行<br>.getPosition() 获取当前游标的位置(位置是从0开始的)<br>.getCount() 获取总行数</p>
+<h3 id="关于nginx"><a href="#关于nginx" class="headerlink" title="关于nginx"></a>关于nginx</h3><p><a href="http://nginx.org/en/download.html" target="_blank" rel="external">下载地址</a>，配置一个局域网内的文件服务器只需：<br>修改 “nginx\conf\nginx.conf”文件<br>cmd进入nginx根目录下</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start nginx</td>
+<td>启动</td>
+</tr>
+<tr>
+<td>nginx.exe -s stop</td>
+<td>直接停止</td>
+</tr>
+<tr>
+<td>nginx.exe -s quit</td>
+<td>保存配置后停止</td>
+</tr>
+<tr>
+<td>nginx.exe -s reload</td>
+<td>重载</td>
+</tr>
+</tbody>
+</table>
+<h3 id="System-setProperty"><a href="#System-setProperty" class="headerlink" title="System.setProperty()"></a>System.setProperty()</h3><p>System.setProperty(“key”, “value”);设置系统属性值，将值保存在内存里，需要时就通过System.getProperty(“key”);获取</p>
+<h3 id="CMD指令"><a href="#CMD指令" class="headerlink" title="CMD指令"></a>CMD指令</h3><p><a href="http://www.jb51.net/article/41322.htm" target="_blank" rel="external">CMD教程</a><br>/C 执行命令后结束<br>/K 执行命令后保留<br>/D 禁止从注册表执行Auto命令<br>cd. 进入当前目录（不懂这个有什么用）<br>cd.. 进入上层目录<br>cd\ 进入当前的根目录。cd命令执行跳转目录时，是change directory。不过也有另一种解释Current Directory，可用于显示当前的完整路径如：<br><img src="CMD1.jpg" alt=""><br>netsh interface ip set dns “本地连接” static 180.76.76.76 修改dns，其中<strong>本地连接</strong>是连接名，<strong>180.76.76.76</strong>是dns参数，根据需要进行设置<br>批处理指令</p>
+<blockquote>
+<p>start cmd /c “netsh interface ip set dns “本地连接” static 180.76.76.76”</p>
+</blockquote>
+<p>netsh interface ip set address “网络连接” static IP地址 子网掩码 默认网关 跳数。 修改ip，<strong>网络连接</strong>根据情况修改，win7是<strong>本地连接</strong>，win8以上是<strong>以太网</strong>，ip地址填入需要的参数，子网掩码一般是255.255.255.255，默认网关填入需要的参数，跳数一般是1或者auto</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>calc</td>
+<td>打开计算器</td>
+</tr>
+<tr>
+<td>Chkdsk</td>
+<td>磁盘修复</td>
+</tr>
+<tr>
+<td>Cleanmgr</td>
+<td>清理垃圾</td>
+</tr>
+<tr>
+<td>compmgmt.msc</td>
+<td>计算机管理</td>
+</tr>
+<tr>
+<td>devmgmt.msc</td>
+<td>设备管理器</td>
+</tr>
+<tr>
+<td>diskmgmt.msc</td>
+<td>磁盘管理</td>
+</tr>
+<tr>
+<td>dvdplay</td>
+<td>播放器</td>
+</tr>
+</tbody>
+</table>
+<h3 id="批处理"><a href="#批处理" class="headerlink" title="批处理"></a>批处理</h3><p>echo off 关闭命令显示<br>@echo off “echo off”也不显示</p>
+<h3 id="关于wampserver"><a href="#关于wampserver" class="headerlink" title="关于wampserver"></a>关于wampserver</h3><p>在win7下 如果打开时提示缺少各种dll文件，那么请检查是否安装了<a href="http://www.microsoft.com/en-us/download/details.aspx?id=5582" target="_blank" rel="external">vc9</a>，<a href="http://www.microsoft.com/en-us/download/details.aspx?id=8328" target="_blank" rel="external">vc10</a>，<a href="http://www.microsoft.com/en-us/download/details.aspx?id=30679" target="_blank" rel="external">vc11</a>，<a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784" target="_blank" rel="external">vc13</a>，<a href="http://www.microsoft.com/fr-fr/download/details.aspx?id=48145" target="_blank" rel="external">vc14</a>，其中vc14需要win7安装了sp1更新才可以正常安装。<br>安装完成后，如果localhost打不开，wampserver在右下角状态栏的图标不是绿色，鼠标移过去提示”有一个服务没有打开”,那么很有可能就是80端口被占用了，修改端口就行了。鼠标左击或者右击(左击右击会调出不同的菜单)图标，左击时在Apache文件夹下,点击”Use a port other than 80”修改端口。右击时在Tools下Port used by Apache:80一栏，点击”Use a port other than 80”修改端口。等待一会，wampserver就会变绿了，服务全部启动。浏览器打开时输入localhost:8080就可以打开了（这里我修改的端口是8080，所以指定了8080端口，你修改了什么端口指定它就行了）。</p>
+<h3 id="关于GWT"><a href="#关于GWT" class="headerlink" title="关于GWT"></a>关于GWT</h3><p>GWT地址：<a href="https://github.com/gwt-plugins/gwt-eclipse-plugin" target="_blank" rel="external">https://github.com/gwt-plugins/gwt-eclipse-plugin</a><br>GWT Designer地址：<a href="https://code.google.com/archive/p/gwt-designer/（需翻墙）建议直接下载离线包安装" target="_blank" rel="external">https://code.google.com/archive/p/gwt-designer/（需翻墙）建议直接下载离线包安装</a></p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/07/24/Proguard text/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
