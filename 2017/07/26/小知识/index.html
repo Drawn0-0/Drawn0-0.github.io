@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="7月 26, 2017" />
-        <meta property="article:modified_time" content="9月 07, 2017" />
+        <meta property="article:modified_time" content="9月 23, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "札记",
     "url": "http://yoursite.com/2017/07/26/小知识/index.html",
     "datePublished": "7月 26, 2017",
-    "dateModified": "9月 07, 2017",
+    "dateModified": "9月 23, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -507,8 +507,8 @@
 <li><p>BLOB 这种类型是你输入什么就保存什么。举个例子，你可以以这种类型保存音乐，视频，图片到数据库中  </p>
 </li>
 </ol>
-<h3 id="数据库查询有多少张表"><a href="#数据库查询有多少张表" class="headerlink" title="数据库查询有多少张表"></a>数据库查询有多少张表</h3><p>SELECT name FROM sqlite_master WHERE type = ‘table’ AND name != ‘android_metadata’ AND name != ‘sqlite_sequence’;<br>这里排除了android_metadata表和sqlite_sequence表。<br><strong>android_metadata</strong> 记录了创建的地区。<br><img src="/2017/07/26/小知识/SQLite4.jpg" alt=""><br><strong>sqlite_sequence</strong> 记录了数据库包含的表名及其对应的数据量<br><img src="/2017/07/26/小知识/SQLite3.jpg" alt=""></p>
-<h3 id="查询表头字段格式"><a href="#查询表头字段格式" class="headerlink" title="查询表头字段格式"></a>查询表头字段格式</h3><p>PRAGMA table_info(表名);如下数据库查询<br><img src="/2017/07/26/小知识/SQLite1.jpg" alt="">可得<br><img src="/2017/07/26/小知识/SQLite2.jpg" alt=""></p>
+<h3 id="数据库查询有多少张表"><a href="#数据库查询有多少张表" class="headerlink" title="数据库查询有多少张表"></a>数据库查询有多少张表</h3><p>SELECT name FROM sqlite_master WHERE type = ‘table’ AND name != ‘android_metadata’ AND name != ‘sqlite_sequence’;<br>这里排除了android_metadata表和sqlite_sequence表。<br><strong>android_metadata</strong> 记录了创建的地区。<br><img src="/images/SQLite4.jpg" alt=""><br><strong>sqlite_sequence</strong> 记录了数据库包含的表名及其对应的数据量<br><img src="/images/SQLite3.jpg" alt=""></p>
+<h3 id="查询表头字段格式"><a href="#查询表头字段格式" class="headerlink" title="查询表头字段格式"></a>查询表头字段格式</h3><p>PRAGMA table_info(表名);如下数据库查询<br><img src="/images/SQLite1.jpg" alt="">可得<br><img src="/images/SQLite2.jpg" alt=""></p>
 <h3 id="Cursor的一些方法"><a href="#Cursor的一些方法" class="headerlink" title="Cursor的一些方法"></a>Cursor的一些方法</h3><p>.moveToPrevious 移动游标到上一行<br>·isAfterLast() 游标是否指向最后一行<br>.getPosition() 获取当前游标的位置(位置是从0开始的)<br>.getCount() 获取总行数</p>
 <h3 id="关于nginx"><a href="#关于nginx" class="headerlink" title="关于nginx"></a>关于nginx</h3><p><a href="http://nginx.org/en/download.html" target="_blank" rel="external">下载地址</a>，配置一个局域网内的文件服务器只需：<br>修改 “nginx\conf\nginx.conf”文件<br>cmd进入nginx根目录下</p>
 <table>
@@ -538,7 +538,7 @@
 </tbody>
 </table>
 <h3 id="System-setProperty"><a href="#System-setProperty" class="headerlink" title="System.setProperty()"></a>System.setProperty()</h3><p>System.setProperty(“key”, “value”);设置系统属性值，将值保存在内存里，需要时就通过System.getProperty(“key”);获取</p>
-<h3 id="CMD指令"><a href="#CMD指令" class="headerlink" title="CMD指令"></a>CMD指令</h3><p><a href="http://www.jb51.net/article/41322.htm" target="_blank" rel="external">CMD教程</a><br>/C 执行命令后结束<br>/K 执行命令后保留<br>/D 禁止从注册表执行Auto命令<br>cd. 进入当前目录（不懂这个有什么用）<br>cd.. 进入上层目录<br>cd\ 进入当前的根目录。cd命令执行跳转目录时，是change directory。不过也有另一种解释Current Directory，可用于显示当前的完整路径如：<br><img src="/2017/07/26/小知识/CMD1.jpg" alt=""><br>netsh interface ip set dns “本地连接” static 180.76.76.76 修改dns，其中<strong>本地连接</strong>是连接名，<strong>180.76.76.76</strong>是dns参数，根据需要进行设置<br>批处理指令</p>
+<h3 id="CMD指令"><a href="#CMD指令" class="headerlink" title="CMD指令"></a>CMD指令</h3><p><a href="http://www.jb51.net/article/41322.htm" target="_blank" rel="external">CMD教程</a><br>/C 执行命令后结束<br>/K 执行命令后保留<br>/D 禁止从注册表执行Auto命令<br>cd. 进入当前目录（不懂这个有什么用）<br>cd.. 进入上层目录<br>cd\ 进入当前的根目录。cd命令执行跳转目录时，是change directory。不过也有另一种解释Current Directory，可用于显示当前的完整路径如：<br><img src="/images/CMD1.jpg" alt=""><br>netsh interface ip set dns “本地连接” static 180.76.76.76 修改dns，其中<strong>本地连接</strong>是连接名，<strong>180.76.76.76</strong>是dns参数，根据需要进行设置<br>批处理指令</p>
 <blockquote>
 <p>start cmd /c “netsh interface ip set dns “本地连接” static 180.76.76.76”</p>
 </blockquote>
