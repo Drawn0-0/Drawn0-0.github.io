@@ -478,7 +478,45 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="语法简介"><a href="#语法简介" class="headerlink" title="语法简介"></a>语法简介</h1><h2 id="词法约定"><a href="#词法约定" class="headerlink" title="词法约定"></a>词法约定</h2><p>变量是以字母或下划线开头的字母下划线数字序列，不要使用下划线加大写字母的标识符，因为Lua的保留字是这种形式<br>Lua的保留字：<br>|and|break|do|else|elseif|<br>|-|-|-|-|-|<br>|end|false|for|function|if|<br>|in|local|nil|not|or|<br>|repeat|return|then|true|until|<br>|while|<br>在Lua中大小写敏感，如and是保留字，And和AND则不是保留字</p>
+        <h1 id="语法简介"><a href="#语法简介" class="headerlink" title="语法简介"></a>语法简介</h1><h2 id="词法约定"><a href="#词法约定" class="headerlink" title="词法约定"></a>词法约定</h2><p>变量是以字母或下划线开头的字母下划线数字序列，不要使用下划线加大写字母的标识符，因为Lua的保留字是这种形式<br>Lua的保留字：</p>
+<table>
+<thead>
+<tr>
+<th>and</th>
+<th>break</th>
+<th>do</th>
+<th>else</th>
+<th>elseif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>end</td>
+<td>false</td>
+<td>for</td>
+<td>function</td>
+<td>if</td>
+</tr>
+<tr>
+<td>in</td>
+<td>local</td>
+<td>nil</td>
+<td>not</td>
+<td>or</td>
+</tr>
+<tr>
+<td>repeat</td>
+<td>return</td>
+<td>then</td>
+<td>true</td>
+<td>until</td>
+</tr>
+<tr>
+<td>while</td>
+</tr>
+</tbody>
+</table>
+<p>在Lua中大小写敏感，如and是保留字，And和AND则不是保留字</p>
 <h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><p>Lua 的多条语句之间并不要求任何分隔符， 如 C 语言的分号(;)， 其中换行符也同样不能起到语句分隔的<br>作用</p>
 <p>Lua的注释有两种：单行注释，使用两个减号（–）开头就行了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">--单行注释</div></pre></td></tr></table></figure></p>
 <p>多行注释，两个减号（–）后面紧跟两个正中括弧（[[），后面就是注释语句，结束时减减（–）紧跟两个反中括弧（]]）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">--[[我是</div><div class="line">跨行注</div><div class="line">释语</div><div class="line">句</div><div class="line">--]]</div></pre></td></tr></table></figure></p>
