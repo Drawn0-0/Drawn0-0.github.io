@@ -330,7 +330,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GPIO"><span class="post-toc-number">1.</span> <span class="post-toc-text">GPIO</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Timer"><span class="post-toc-number">2.</span> <span class="post-toc-text">Timer</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -478,8 +478,45 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">--init.lua</div><div class="line">--定义 IO 口</div><div class="line">LEDB = 5</div><div class="line">LEDR = 6</div><div class="line">LEDG = 7</div><div class="line">--设置 IO 口模式</div><div class="line">gpio.mode(LEDB, gpio.OUTPUT)</div><div class="line">gpio.mode(LEDR, gpio.OUTPUT)</div><div class="line">gpio.mode(LEDG, gpio.OUTPUT)</div><div class="line">--初始设置输出高电平， 所有灯都不亮</div><div class="line">gpio.write(LEDB, gpio.HIGH)</div><div class="line">gpio.write(LEDR, gpio.HIGH)</div><div class="line">gpio.write(LEDG, gpio.HIGH)</div><div class="line">--初始化 COUNTER</div><div class="line">COUNTER = 0</div><div class="line">print(&quot;----Hello world----&quot;)</div><div class="line">--注册定时器 0</div><div class="line">tmr.register(0, 1000, tmr.ALARM_AUTO,</div><div class="line">function()</div><div class="line">COUNTER = COUNTER + 1;</div><div class="line">if(COUNTER % 3 == 0) then</div><div class="line">gpio.write(LEDR, gpio.LOW)</div><div class="line">gpio.write(LEDG, gpio.HIGH)</div><div class="line">gpio.write(LEDB, gpio.HIGH)</div><div class="line">print(&quot;----Red Led ON----&quot;)</div><div class="line">elseif (COUNTER % 3 == 1) then</div><div class="line">gpio.write(LEDR, gpio.HIGH)</div><div class="line">gpio.write(LEDG, gpio.LOW)</div><div class="line">gpio.write(LEDB, gpio.HIGH)</div><div class="line">print(&quot;----Green Led ON----&quot;)</div><div class="line">elseif (COUNTER % 3 == 2) then</div><div class="line">gpio.write(LEDR, gpio.HIGH)</div><div class="line">gpio.write(LEDG, gpio.HIGH)</div><div class="line">gpio.write(LEDB, gpio.LOW)</div><div class="line">print(&quot;----Blue Led ON----&quot;)</div><div class="line">else</div><div class="line">print(&quot;----Exception Error----&quot;)</div><div class="line">end</div><div class="line">end</div><div class="line">) </div><div class="line">--启动定时器 0</div><div class="line">tmr.start(0)</div></pre></td></tr></table></figure>
-<p>在NodeMCU中init.lua是定义的系统启动时运行的文件， 相当于以前我们ＤＯＳ系统里的autoexec.bat文件和linux系统中的rc.local文件，即开机运行的意思。</p>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">--init.lua</div><div class="line">--定义 IO 口</div><div class="line">LEDB = 5</div><div class="line">LEDR = 6</div><div class="line">LEDG = 7</div><div class="line">--设置 IO 口模式</div><div class="line">gpio.mode(LEDB, gpio.OUTPUT)</div><div class="line">gpio.mode(LEDR, gpio.OUTPUT)</div><div class="line">gpio.mode(LEDG, gpio.OUTPUT)</div><div class="line">--初始设置输出低电平， 所有灯都不亮</div><div class="line">gpio.write(LEDB, gpio.LOW)</div><div class="line">gpio.write(LEDR, gpio.LOW)</div><div class="line">gpio.write(LEDG, gpio.LOW)</div><div class="line">--初始化 COUNTER</div><div class="line">COUNTER = 0</div><div class="line">print(&quot;----Hello----&quot;)</div><div class="line">--注册定时器 0</div><div class="line">tmr.register(0, 1000, tmr.ALARM_AUTO,</div><div class="line">function()</div><div class="line">COUNTER = COUNTER + 1;</div><div class="line">if(COUNTER % 3 == 0) then</div><div class="line">gpio.write(LEDR, gpio.HIGH)</div><div class="line">gpio.write(LEDG, gpio.LOW)</div><div class="line">gpio.write(LEDB, gpio.LOW)</div><div class="line">print(&quot;----Red Led ON----&quot;)</div><div class="line">	elseif (COUNTER % 3 == 1) then</div><div class="line">	gpio.write(LEDR, gpio.LOW)</div><div class="line">	gpio.write(LEDG, gpio.HIGH)</div><div class="line">	gpio.write(LEDB, gpio.LOW)</div><div class="line">	print(&quot;----Green Led ON----&quot;)</div><div class="line">	elseif (COUNTER % 3 == 2) then</div><div class="line">	gpio.write(LEDR, gpio.LOW)</div><div class="line">	gpio.write(LEDG, gpio.LOW)</div><div class="line">	gpio.write(LEDB, gpio.HIGH)</div><div class="line">	print(&quot;----Blue Led ON----&quot;)</div><div class="line">	else</div><div class="line">	print(&quot;----Exception Error----&quot;)</div><div class="line">	end</div><div class="line">end</div><div class="line">) </div><div class="line">--启动定时器 0</div><div class="line">tmr.start(0)</div></pre></td></tr></table></figure>
+<p>在NodeMCU中init.lua是定义的系统启动时运行的文件， 相当于以前我们ＤＯＳ系统里的autoexec.bat文件和linux系统中的rc.local文件，即开机运行的意思。将脚本命名为 <strong>init.lua</strong> 方便开机直接运行。</p>
+<h2 id="GPIO"><a href="#GPIO" class="headerlink" title="GPIO"></a>GPIO</h2><p>关于GPIO的文档<a href="https://nodemcu.readthedocs.io/en/master/en/modules/gpio/" target="_blank" rel="external">网站文档</a>，<a href="https://github.com/nodemcu/nodemcu-firmware/wiki/nodemcu_api_cn#gpiomode" target="_blank" rel="external">Github文档</a><br>GPIO（General Purpose I/O Ports）通用输入输出口，简单的说就是这个开发板上留出的针脚。上面程序中的gpio就是nodeMCU的GPIO模块，用于提供对开发板上GPIO针脚的编程控制 。模块和开发板上的针脚并不一定是一一对应的，如这块板的14口控制蓝色LED是对应模块的第5口。GPIO模块有如下方法</p>
+<table>
+<thead>
+<tr>
+<th>原型</th>
+<th>作用</th>
+<th>参数</th>
+<th>例</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gpio.mode(pin, mode）</td>
+<td>初始化引脚的输入输出模式</td>
+<td>引脚io索引 gpio.OUTPUT,gpio.OPENDRAIN,gpio.INPUT或gpio.INT</td>
+<td>gpio.mode(0, gpio.OUTPUT)</td>
+<td>nil</td>
+</tr>
+<tr>
+<td>gpio.read(pin)</td>
+<td>读取引脚值</td>
+<td>引脚索引</td>
+<td>gpio.read(0)</td>
+<td>0或1，即高低电位</td>
+</tr>
+<tr>
+<td>gpio.write(pin, level)</td>
+<td>设置引脚值</td>
+<td>引脚索引，引脚值gpio.HIGH或gpio.LOW</td>
+<td>gpio.write(0, gpio.HIGH)</td>
+<td>nil</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/nodeMCU.jpg" alt=""><br>由上图可知5,6,7口用于控制蓝红绿三色LED，输出模式，高电平时LED灯亮，当输出模式低电平时灯不亮。<br>所以点亮LED，首先设置对应IO口的模式为输出模式，然后设置对应IO为高电平，这样即可点亮，简化版的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">--统一设置输出模式</div><div class="line">gpio.mode(6,gpio.OUTPUT)</div><div class="line">gpio.mode(7,gpio.OUTPUT)</div><div class="line">gpio.mode(5,gpio.OUTPUT)</div><div class="line">--将其他LED关闭，开启蓝灯</div><div class="line">gpio.write(6,gpio.LOW)</div><div class="line">gpio.write(7,gpio.LOW)</div><div class="line">gpio.write(5,gpio.HIGH)</div></pre></td></tr></table></figure></p>
+<h2 id="Timer"><a href="#Timer" class="headerlink" title="Timer"></a><a href="https://nodemcu.readthedocs.io/en/master/en/modules/tmr/" target="_blank" rel="external">Timer</a></h2><p>上面还用到了定时器模块，定时器用于</p>
 
     
 

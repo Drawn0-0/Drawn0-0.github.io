@@ -330,7 +330,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#语法简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">语法简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#词法约定"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">词法约定</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码规范"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">代码规范</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#变量"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">变量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#变量的类型"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">变量的类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#表达式"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">表达式</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#语法简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">语法简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#词法约定"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">词法约定</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码规范"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">代码规范</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#变量"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">变量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#变量的类型"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">变量的类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#表达式"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">表达式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#函数"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本语法"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">基本语法</span></a></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -536,9 +536,13 @@
 <li>table是lua中的唯一数据结构，可以用于实现数组，矩阵，链表，队列等其他数据结构。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">local t = &#123;32,&quot;jeep&quot;, name = &quot;cherry&quot;&#125;</div><div class="line">local p = &#123;[&quot;name&quot;] = &quot;peach&quot;&#125;</div><div class="line">print(t[1]) --&gt; 32</div><div class="line">print(t[2]) --&gt; jeep</div><div class="line">print(t[&quot;name&quot;],t.name) --&gt; cherry cherry</div><div class="line">print(p[&quot;name&quot;],p.name) --&gt; peach peach</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>需要注意的是 <strong>table的索引是从1开始的</strong> 如果取其为零的索引会得到 nil 。table <strong>没有固定大小</strong> ，可以动态添加元素到table中。</p>
+<p>需要注意的是 <strong>table的索引是从1开始的</strong> 如果取其为零的索引会得到 nil 。table <strong>没有固定大小</strong> ，可以动态添加元素到table中。获取table的长度：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">t = &#123;10,5,797&#125;</div><div class="line">table.getn(t)</div><div class="line"></div><div class="line">或者</div><div class="line"></div><div class="line">#t</div><div class="line"></div><div class="line">在Lua5.3版本getn（）失效了，要自己构建一个</div><div class="line">function table.getn(x) </div><div class="line">local ret = 0 ----&gt;Lua中变量默认nil值，使用nil值进行计算会出差，所以记得初始化变量</div><div class="line">for i in pairs(x) do </div><div class="line">	ret=ret+1</div><div class="line"> end </div><div class="line">return ret </div><div class="line">end</div></pre></td></tr></table></figure></p>
+<p>表除了保存数据外，还可以保存算式，保存算式时算式是不算在表的长度中的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">local t = &#123;1, a = 8, 3&#125;</div><div class="line">print(#t)   --&gt;结果为2</div></pre></td></tr></table></figure></p>
+<p>有点类似于类中的成员变量一样，调用算式时：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">local t = &#123;1, a = 8, 3&#125;</div><div class="line">print(t.a)   --&gt;结果为8</div></pre></td></tr></table></figure></p>
+<p>此外需要注意 <strong>不要在表中保存nil</strong> 会造成表的长度返回不准</p>
 <ol>
-<li><p>function，函数是第一类值， 意味着函数可以存储在变量中， 可以作为函数的参数， 也可以作为函数的返回值。 这个特性给了语言很大的灵活性（第一类值：就是函数function与int double地位一样，可以作为对象传递，可以作为函数的返回值）</p>
+<li><p>function，函数是第一类值， 意味着函数可以存储在变量中， 可以作为函数的参数， 也可以作为函数的返回值。 这个特性给了语言很大的灵活性（第一类值：就是函数function与int double地位一样，可以作为对象传递，可以作为函数的返回值）<br>Lua中使用函数时记得先定义函数再使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function table.getn(x) </div><div class="line">local ret=0</div><div class="line">for i in pairs(x) do </div><div class="line">	ret=ret+1</div><div class="line"> end </div><div class="line">return ret </div><div class="line">end</div><div class="line"></div><div class="line">local xiang = &#123;10,22,34,42,51&#125;  </div><div class="line">print(&quot;xiang length ==&quot;,table.getn(xiang))</div></pre></td></tr></table></figure>
 </li>
 <li><p>userdata用来描述应用程序或者使用c实现的库创建的新类型，userdata只实现了赋值和相等操作。</p>
 </li>
@@ -546,7 +550,8 @@
 </li>
 </ol>
 <h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><ol>
-<li><strong>==</strong> <strong>~=</strong> 用于比较相等和不相等。如果两个值的类型不同，那么在Lua中他们就是不等的，nil与自己相等。tables，userdata，functions是通过引用比较，只有当他们引用同一个对象时才相等。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">a = &#123;x=1,y=2&#125;</div><div class="line">b = &#123;x=1,y=2&#125;</div><div class="line">c = a</div><div class="line"></div><div class="line">print(a==c) --&gt; true</div><div class="line">print(b==c) --&gt; false</div></pre></td></tr></table></figure>
+<li>算数操作符，<strong>+ - * / ^(指数) %(取模)</strong><br>其中 <strong>-</strong> 可用于加减运算，也可用于表示负数。另外需要注意的是 <em>Lua 没有自增（++）和自减（–）运算符</em></li>
+<li>关系操作符，<strong>&gt;、 &lt;、 &gt;=、 &lt;=、 ==、 ~=</strong><br><strong>==</strong> <strong>~=</strong> 用于比较相等和不相等。如果两个值的类型不同，那么在Lua中他们就是不等的，nil与自己相等。tables，userdata，functions是通过引用比较，只有当他们引用同一个对象时才相等。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">a = &#123;x=1,y=2&#125;</div><div class="line">b = &#123;x=1,y=2&#125;</div><div class="line">c = a</div><div class="line"></div><div class="line">print(a==c) --&gt; true</div><div class="line">print(b==c) --&gt; false</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>Lua比较数字时按数字大小进行，比较字符串按字母顺序进行，字符串或数字与不同类型的值比较时会报错。</p>
@@ -554,7 +559,42 @@
 <li><strong>and or not</strong> 和与非，在boolean值的逻辑运算时是一样的，但是不同于C，JAVA的地方在于，进行数值的逻辑运算时Lua是不会报错的。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">print(4 and 5) --&gt; 5</div><div class="line">print(nil and 13) --&gt; nil</div><div class="line">print(false and 13) --&gt; false</div><div class="line">print(4 or 5) --&gt; 4</div><div class="line">print(false or 5) --&gt; 5</div><div class="line">print(true and false) --&gt; false</div><div class="line">print(true or false) --&gt; true</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>如上，使用 <strong>and</strong> 时，如果是两个数的运算，结果总是较大的那个数，如果是boolean或者nil与数的运算，。使用 <strong>or</strong> 时，结果总是较小的那个数，</p>
+<p>如上，使用 <strong>and</strong> 时，如果是两个数的运算，结果总是较大的那个数，使用 <strong>or</strong> 时，结果总是较小的那个数。如果是数字和boolean或者nil的运算，那么可以按照以下优先级：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">or   小数字---大数字---true---false---nil   and</div></pre></td></tr></table></figure></p>
+<p>进行or运算时，结果优先取上式左边的值，进行and运算时，优先取右边的值。</p>
+<ol>
+<li><p>字符串连接，字符串连接使用 <strong>..</strong> 进行操作，如果有数字，就会将数字转换为字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">print (“hello” .. “everyone”) --&gt; hello everyone</div><div class="line">print ( 2 .. “ apples”) --&gt; 2 apples</div><div class="line">s = 2 .. 3</div><div class="line">print(s , type(s)) --&gt; 23 string</div></pre></td></tr></table></figure>
+</li>
+<li><p>构造表，表使用 <strong>{}</strong> 进行构造，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">b = &#123;x = 0, y = 1, &quot;Monday&quot;, 109&#125;</div><div class="line">print(b[1],b[2],b.x,b.y) --&gt; Monday 109 0 1</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数无非两个功能，一，完成特定的操作就像Java的void函数一样。二进行运算返回一个数值，也就是有返回值的函数。</p>
+<ol>
+<li><p>Lua 函数实参和形参的匹配与赋值语句类似， 多余部分被忽略， 缺少部分用 nil 补足</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function f(a, b)</div><div class="line">	return a and b</div><div class="line">end</div><div class="line">c = f(3) d = f(3,4) e= f(3,4,5)</div><div class="line">print(c, d, e) --&gt; nil 4 4</div></pre></td></tr></table></figure>
+</li>
+<li><p>Lua 函数支持返回多个结果值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function foo0 () end -- returns no results</div><div class="line">function foo1 () return &apos;a&apos; end -- returns 1 result</div><div class="line">function foo2 () return &apos;a&apos;,&apos;b&apos; end -- returns 2 results</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>当调用作为表达式最后一个参数或者仅有一个参数时， 根据变量个数函数尽可能多地返回多个值， 不<br>足补 nil， 超出舍去。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">x,y = foo2() -- x=&apos;a&apos;, y=&apos;b&apos;</div><div class="line">x = foo2() -- x=&apos;a&apos;, &apos;b&apos; is discarded</div><div class="line">x,y,z = 10,foo2() -- x=10, y=&apos;a&apos;, z=&apos;b&apos;</div><div class="line">x,y = foo0() -- x=nil, y=nil</div><div class="line">x,y = foo1() -- x=&apos;a&apos;, y=nil</div><div class="line">x,y,z = foo2() -- x=&apos;a&apos;, y=&apos;b&apos;, z=nil</div></pre></td></tr></table></figure>
+<p>其他情况下， 函数调用仅返回第一个值（如果没有返回值为 nil）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">x,y = foo2(), 20 -- x=&apos;a&apos;, y=20</div><div class="line">x,y = foo0(), 20, 30 -- x=&apos;nil&apos;, y=20, 30 is discarded</div><div class="line">print(foo2(), 1) --&gt; a 1</div><div class="line">print(foo2() .. &quot;x&quot;) --&gt; ax</div><div class="line">a = &#123;foo0(), foo2(), 4&#125; -- a[1] = nil, a[2] = &apos;a&apos;, a[3] = 4</div></pre></td></tr></table></figure></p>
+<p>与Java相同Lua也支持可变参数，同样使用 <strong>…</strong> 三个点表示可变参数。Lua 将函数的可变参数放在一个叫 arg 的表中， 除了参数以外， arg 表中还有一个域 n 表示参数的个数。在函数参数中， 固定参数和可变参数可以一起声明， 但是固定参数一定要在变长参数之前声明。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function test(arg1,arg2,...)</div><div class="line">	...</div><div class="line">end</div></pre></td></tr></table></figure></p>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><ol>
+<li><p>赋值语句<br>Lua 中的赋值语句和其它编程语言基本相同， 唯一的差别是 Lua 支持“多重赋值”。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">local x,y = &quot;test&quot;, 12 -- “test” 赋值给 x， 12 赋值给 y</div></pre></td></tr></table></figure>
+</li>
+<li><p>局部变量和块<br>可以用 local 来定义局部变量， 例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">local a = &quot;china&quot;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>local 是保留字， 表示该变量是局部变量。 和全局变量不同的是， 局部变量的作用范围仅限于其所在的程<br>序块。 Lua 中的程序可以为控制结构的执行体、 函数执行体或者是一个程序块。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">local x =12</div><div class="line">if x &gt;10 then</div><div class="line">	local x = 0</div><div class="line">	print(“x=”,x) -- 打印结果是： x= 0 ， 而不是 12</div><div class="line">end</div></pre></td></tr></table></figure></p>
+<ol>
+<li>控制语句<br>if 语句，if 语句有 3 种结构：<br>```<br>if 条件语句 then<br> 执行语句<br>end</li>
+</ol>
+<p>if 条件语句 then<br>    执行语句<br>else<br>    执行语句<br>end</p>
 
     
 
