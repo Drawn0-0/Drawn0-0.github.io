@@ -12,8 +12,6 @@
     
     <title>
         
-            归档: 2017 | 
-        
         Drawn0-0
     </title>
 
@@ -65,15 +63,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017 | Drawn0-0">
+    <meta property="og:title" content="Drawn0-0">
     <meta property="og:image" content="/img/logo2.PNG" />
     <meta property="og:description" content="">
     
 
     
+        <meta property="article:published_time" content="10月 12, 2017" />
+        <meta property="article:modified_time" content="10月 12, 2017" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="归档: 2017 | Drawn0-0">
+    <meta name="twitter:title" content="Drawn0-0">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/logo2.PNG">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +82,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2017/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/10/12/NodeMCU Wifi/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Drawn0-0",
+        "logo": "/img/logo2.PNG"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Drawn",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/logo2.PNG"
+        },
+        "description": "你现在所担心的一切，不过是未来忆起往事时的小小插曲罢了"
+    },
+    "headline": "",
+    "url": "http://yoursite.com/2017/10/12/NodeMCU Wifi/index.html",
+    "datePublished": "10月 12, 2017",
+    "dateModified": "10月 12, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com"
+    }
+}
+</script>
 
 
     
@@ -270,632 +301,236 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/12/NodeMCU Wifi/"></a></p>
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
     </div>
+    -->
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/12/NodeMCU Wifi/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="Drawn's avatar">
-            </div>
-            <div>
-                <strong>Drawn</strong>
-                <span>10月 12, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#NodeMCU-Wifi"><span class="post-toc-number">1.</span> <span class="post-toc-text">NodeMCU Wifi</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#WIFI-Module"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">WIFI Module</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#wifi-setmode"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">wifi.setmode( )</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#wifi-sta-config（）"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">wifi.sta.config（）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#wifi-sta-connect"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">wifi.sta.connect()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#wifi-sta-autoconnect"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">wifi.sta.autoconnect( )</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#wifi-sta-getip"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">wifi.sta.getip()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#wifi-sta-getmac"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">wifi.sta.getmac()</span></a></li></ol></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
                 
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/12/NodeMCU 光敏红外/"></a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/12/NodeMCU 光敏红外/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="Drawn's avatar">
-            </div>
-            <div>
-                <strong>Drawn</strong>
-                <span>10月 12, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/12/NodeMCU 继电器/"></a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/12/NodeMCU 继电器/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="Drawn's avatar">
-            </div>
-            <div>
-                <strong>Drawn</strong>
-                <span>10月 12, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/12/NodeMCU DHT/"></a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/12/NodeMCU DHT/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="Drawn's avatar">
-            </div>
-            <div>
-                <strong>Drawn</strong>
-                <span>10月 12, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/12/NodeMCU PWM/"></a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/12/NodeMCU PWM/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="Drawn's avatar">
-            </div>
-            <div>
-                <strong>Drawn</strong>
-                <span>10月 12, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/12/Lua Key/">Lua Key</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/12/Lua Key/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="Drawn's avatar">
-            </div>
-            <div>
-                <strong>Drawn</strong>
-                <span>10月 12, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/ESP8266/">ESP8266</a>, <a class="post_category-link" href="/categories/ESP8266/NodeMCU/">NodeMCU</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/10/星空练习/">星空练习</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/10/星空练习/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="Drawn's avatar">
-            </div>
-            <div>
-                <strong>Drawn</strong>
-                <span>10月 10, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/自定义view/">自定义view</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/10/Lua 笔记/">Lua 笔记</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            语法简介
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/10/Lua 笔记/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="Drawn's avatar">
-            </div>
-            <div>
-                <strong>Drawn</strong>
-                <span>10月 10, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Lua/">Lua</a>, <a class="post_category-link" href="/categories/Lua/语言/">语言</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/10/Lua LED/">点亮LED</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/10/Lua LED/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="Drawn's avatar">
-            </div>
-            <div>
-                <strong>Drawn</strong>
-                <span>10月 10, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/ESP8266/">ESP8266</a>, <a class="post_category-link" href="/categories/ESP8266/Lua/">Lua</a>, <a class="post_category-link" href="/categories/ESP8266/Lua/NodeMCU/">NodeMCU</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/07/pio/">POI Excel使用记录</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/07/pio/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/ava.png" width="44px" height="44px" alt="Drawn's avatar">
-            </div>
-            <div>
-                <strong>Drawn</strong>
-                <span>9月 07, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/page/2/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/ava.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Drawn</strong>
+        <span>10月 12, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&url=http://yoursite.com/2017/10/12/NodeMCU Wifi/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=&url=http://yoursite.com/2017/10/12/NodeMCU Wifi/index.html&via=Drawn" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/10/12/NodeMCU Wifi/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/10/12/NodeMCU Wifi/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="NodeMCU-Wifi"><a href="#NodeMCU-Wifi" class="headerlink" title="NodeMCU Wifi"></a>NodeMCU Wifi</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">if true then</div><div class="line">    g_mac = nil</div><div class="line">    print(&quot;set up wifi mode&quot;)</div><div class="line">    wifi.setmode(wifi.STATION)</div><div class="line">    --根据无线路由器来设置 WiFi 名称和 WiFi 密码</div><div class="line">    wifi.sta.config(&quot;WiFi 名称&quot;, &quot;WiFi 密码&quot;))</div><div class="line">    wifi.sta.connect()</div><div class="line">    wifi.sta.autoconnect(1)</div><div class="line">    cnt = 0</div><div class="line">    tmr.alarm(1, 1000, tmr.ALARM_AUTO, function()</div><div class="line">        if (wifi.sta.getip() == nil) and (cnt &lt; 20) then</div><div class="line">            print(&quot;----IP unavaiable, Waiting...&quot;)</div><div class="line">            cnt = cnt + 1</div><div class="line">        else</div><div class="line">            tmr.stop(1)</div><div class="line">            if (cnt &lt; 20) then print(&quot;IP:&quot; .. wifi.sta.getip())</div><div class="line">                print(&quot;MAC:&quot; .. wifi.sta.getmac())</div><div class="line">            else</div><div class="line">                print(&quot;----No Wifi Connected.&quot;)</div><div class="line">            end</div><div class="line">        end</div><div class="line">    end)</div><div class="line">else</div><div class="line">    print(&quot;Modify wifi.sta.config() function in line 7 according settings of your wireless router.&quot;)</div><div class="line">end</div></pre></td></tr></table></figure>
+<h2 id="WIFI-Module"><a href="#WIFI-Module" class="headerlink" title="WIFI Module"></a>WIFI Module</h2><h3 id="wifi-setmode"><a href="#wifi-setmode" class="headerlink" title="wifi.setmode( )"></a>wifi.setmode( )</h3><p>原型： wifi.setmode(mode[, save])<br>作用： 配置WiFi工作模式<br>参数： </p>
+<ol>
+<li>mode模式<br>1.wifi.STATION 用于连接路由器，以便于连接互联网<br>2.wifi.SOFTAP 设备仅作为接入点。这将允许查看WiFi网络列表中的设备（当然，除非您隐藏SSID）。在这种模式下，计算机可以连接到NodeMCU，创建一个局域网。除非更改此值，否则NodeMCU设备将获得本地IP地址192.168.4.1，并为连接的计算机分配下一个可用的IP地址，例如192.168.4.2<br>3.wifi.STATIONAP 结合了wifi.STATION和wifi.SOFTAP的功能。它允许您创建本地WiFi连接并连接到另一个WiFi路由器<br>4.wifi.NULLMODE 将WiFi模式更改为NULL_MODE将使WiFi进入与MODEM_SLEEP类似的低功耗状态，只要wifi.nullmodesleep(false)尚未被调用</li>
+<li>save 选择是否将WiFi模式保存到Flash中<br>1.true WiFi模式配置将通过电源循环保留。（默认）<br>2.false WiFi模式配置将不会通过电源循环保留。</li>
+</ol>
+<p>返回值： 设置后的模式<br>例子： wifi.setmode(wifi.STATION)</p>
+<h3 id="wifi-sta-config（）"><a href="#wifi-sta-config（）" class="headerlink" title="wifi.sta.config（）"></a>wifi.sta.config（）</h3><p>原型： wifi.sta.config(station_config)<br>作用： 配置wifi设置<br>参数： wifi.STATION是包含了各种wifi设置数据的一张表</p>
+<ol>
+<li>SSID wifi的名称</li>
+<li>PWD wifi的密码</li>
+</ol>
+<p>其他的还有很多参数可以设置，详见<a href="https://nodemcu.readthedocs.io/en/master/en/modules/wifi/" target="_blank" rel="external">文档</a><br>返回值： true成功 false失败<br>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">--connect to Access Point (DO NOT save config to flash)</div><div class="line">station_cfg=&#123;&#125;</div><div class="line">station_cfg.ssid=&quot;NODE-AABBCC&quot;</div><div class="line">station_cfg.pwd=&quot;password&quot;</div><div class="line">wifi.sta.config(station_cfg)</div><div class="line"></div><div class="line">--connect to Access Point (DO save config to flash)</div><div class="line">station_cfg=&#123;&#125;</div><div class="line">station_cfg.ssid=&quot;NODE-AABBCC&quot;</div><div class="line">station_cfg.pwd=&quot;password&quot;</div><div class="line">station_cfg.save=true</div><div class="line">wifi.sta.config(station_cfg)</div><div class="line"></div><div class="line">--connect to Access Point with specific MAC address  </div><div class="line">station_cfg=&#123;&#125;</div><div class="line">station_cfg.ssid=&quot;NODE-AABBCC&quot;</div><div class="line">station_cfg.pwd=&quot;password&quot;</div><div class="line">station_cfg.bssid=&quot;AA:BB:CC:DD:EE:FF&quot;</div><div class="line">wifi.sta.config(station_cfg)</div><div class="line"></div><div class="line">--configure station but don&apos;t connect to Access point</div><div class="line">station_cfg=&#123;&#125;</div><div class="line">station_cfg.ssid=&quot;NODE-AABBCC&quot;</div><div class="line">station_cfg.pwd=&quot;password&quot;</div><div class="line">station_cfg.auto=false</div><div class="line">wifi.sta.config(station_cfg)</div></pre></td></tr></table></figure></p>
+<h3 id="wifi-sta-connect"><a href="#wifi-sta-connect" class="headerlink" title="wifi.sta.connect()"></a>wifi.sta.connect()</h3><p>在 station 模式下连接到配置的路由</p>
+<h3 id="wifi-sta-autoconnect"><a href="#wifi-sta-autoconnect" class="headerlink" title="wifi.sta.autoconnect( )"></a>wifi.sta.autoconnect( )</h3><p>原型： wifi.sta.autoconnect(auto)<br>作用： 在station 模式下自动连接到路由<br>参数： 0禁用自动连接 1启用自动连接</p>
+<h3 id="wifi-sta-getip"><a href="#wifi-sta-getip" class="headerlink" title="wifi.sta.getip()"></a>wifi.sta.getip()</h3><p>在station 模式下获取IP地址，网络掩码和网关地址。如果IP =”0.0.0.0”，则返回nil<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">-- print current IP address, netmask, gateway</div><div class="line">print(wifi.sta.getip())</div><div class="line">-- 192.168.0.111  255.255.255.0  192.168.0.1</div><div class="line">ip = wifi.sta.getip()</div><div class="line">print(ip)</div><div class="line">-- 192.168.0.111</div><div class="line">ip, nm = wifi.sta.getip()</div><div class="line">print(nm)</div><div class="line">-- 255.255.255.0</div></pre></td></tr></table></figure></p>
+<h3 id="wifi-sta-getmac"><a href="#wifi-sta-getmac" class="headerlink" title="wifi.sta.getmac()"></a>wifi.sta.getmac()</h3><p>在station 模式下获取MAC地址，MAC地址为字符串，例如“18：fe：34：a2：d7：34”</p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/10/12/NodeMCU 光敏红外/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
